@@ -19,14 +19,13 @@
     --gap-card-set: 30px;
 
     /* Timing function */
-    --trans-timing: cubic-bezier(0.4, 0, 0.2, 1);
+    --bezier-timing: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 body {
     color: var(--pr-text-color);
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    line-height: 1.71;
 }
 
 
@@ -59,11 +58,13 @@ img {
     height: auto;
 }
 
+a {
+    color: var(--pr-text-color);
+    text-decoration-line: none;
+}
+
 
 /* Page-header style */
-.page-header {
-    border-bottom: 1px solid#ECECEC;
-}
 
 .page-header .container {
     display: flex;
@@ -76,20 +77,19 @@ img {
     padding-bottom: 25px;
     margin-right: 93px;
     border: none;
-
-    text-decoration-line: none;
 }
 
+.page-header {
+    border-bottom: 1px solid#ECECEC;
+}
 
 /* Logo style */
+
 .logo {
-    
-    color: var(--pr-text-color);
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    text-decoration-line: none;
 }
 
 .accent {
@@ -111,15 +111,12 @@ img {
     padding-top: 32px;
     padding-bottom: 32px;
 
-    color: var(--pr-text-color);
     font-weight: 500;
-    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    text-decoration-line: none;
 
     transition: color 250ms 
-      var(--trans-timing);
+      var(--bezier-timing);
 }
 
 .site-nav .link.current {
@@ -168,13 +165,11 @@ img {
     
     color: var(--sec-text-color);
     font-weight: 500;
-    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    text-decoration-line: none;
 
     transition: color 250ms
-      var(--trans-timing);
+      var(--bezier-timing);
       
 }
 
@@ -184,7 +179,7 @@ img {
     fill: var(--pr-icon-fill);
 
     transition: fill 250ms 
-    var(--trans-timing);
+    var(--bezier-timinging);
 }
 
 .contacts .icon-thumb {
@@ -230,11 +225,11 @@ img {
     margin-right: auto;
     margin-left: auto;
     
+    text-align: center;
     color: var(--inv-text-color);
     font-weight: 900;
     font-size: 44px;
-    line-height: 1.36;
-    text-align: center;
+    line-height: 1.36; 
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
@@ -250,8 +245,8 @@ img {
    
     opacity: 1;
     visibility: visible;
-    transition: opacity 250ms var(--trans-timing), 
-    visibility 250ms var(--trans-timing);
+    transition: opacity 250ms var(--bezier-timing), 
+    visibility 250ms var(--bezier-timing);
 }
 
 .backdrop.is-hidden {
@@ -274,8 +269,8 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    transition: transform 250ms var(--trans-timing), 
-    box-shadow 250ms var(--trans-timing);
+    transition: transform 250ms var(--bezier-timing), 
+    box-shadow 250ms var(--bezier-timing);
 } 
 
 .modal-btn {
@@ -301,11 +296,11 @@ img {
 .section-title {
     margin-bottom: 50px;
 
-    color: var(--pr-text-color);
+    text-align: center;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
-    text-align: center;
     letter-spacing: 0.03em;
 }
 
@@ -317,7 +312,7 @@ img {
 }
 
 .features .list {
-  display:flex;
+  display: flex;
 }
 
 .features .item:not(:first-child){
@@ -330,7 +325,7 @@ img {
     padding: 25px 100px;
     margin-bottom: var(--gap-card-set);
 
-    background: #F5F4FA;
+    background-color: #F5F4FA;
     border-radius: 4px;
 }
 
@@ -338,7 +333,6 @@ img {
     margin-bottom: 10px;
 
     font-weight: 700;
-    font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     letter-spacing: 0.03em;
@@ -346,6 +340,7 @@ img {
 
 .feature-content {
     color: var(--sec-text-color);
+    line-height: 1.71;
     letter-spacing: 0.03em;
 }
 
@@ -376,7 +371,6 @@ img {
     padding: 27px 0px;
 
     font-weight: 700;
-    font-size: 14px;
     line-height: 1.14;
     text-align: center;
     letter-spacing: 0.03em;
@@ -452,14 +446,14 @@ img {
     justify-content: center;
     align-items: center;
     
-    transition: background-color 250ms var(--trans-timing);
+    transition: background-color 250ms var(--bezier-timing);
 }
 
 .social .icon {
     fill: var(--pr-icon-fill);
 
     transition: fill 250ms 
-      var(--trans-timing);
+      var(--bezier-timing);
 }
 
 .social .link:hover,
@@ -488,8 +482,6 @@ img {
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    
-    color: var(--pr-text-color);
 }
 
 .clients .list {
@@ -514,14 +506,14 @@ img {
     cursor: pointer;
 
     transition: border 250ms 
-      var(--trans-timing);
+      var(--bezier-timing);
 }
 
 .clients .icon {
     fill: var(--pr-icon-fill);
 
     transition: fill 250ms 
-      var(--trans-timing);
+      var(--bezier-timing);
 }
 
 .clients .link:hover,
@@ -578,7 +570,7 @@ img {
     margin-top: var(--gap-card-set);  
    
     transition: box-shadow 250ms 
-    var(--trans-timing);
+    var(--bezier-timing);
 }
 
 .projects > .card:hover {
@@ -609,9 +601,9 @@ img {
     opacity: 0;
     transform: translateY(100%);
 
-    transition: opacity 250ms var(--trans-timing),
-    background-color 250ms var(--trans-timing),
-    transform 250ms var(--trans-timing);
+    transition: opacity 250ms var(--bezier-timing),
+    background-color 250ms var(--bezier-timing),
+    transform 250ms var(--bezier-timing);
 }
 
 .projects .description {    
@@ -661,9 +653,9 @@ img {
     cursor: pointer;
     font-family: inherit;
 
-    transition: color 250ms var(--trans-timing),
-    background-color 250ms var(--trans-timing),
-    box-shadow 250ms var(--trans-timing);
+    transition: color 250ms var(--bezier-timing),
+    background-color 250ms var(--bezier-timing),
+    box-shadow 250ms var(--bezier-timing);
 }
 
 .button.hero-primary {
@@ -678,7 +670,7 @@ img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     transition: background 250ms 
-    var(--trans-timing);
+    var(--bezier-timing);
 }
 
 .button.hero-primary,
@@ -737,6 +729,7 @@ img {
     margin-bottom: 9px;
 
     color: var(--inv-text-color);
+    line-height: 1.71;
     letter-spacing: 0.03em;
 }
 
@@ -747,11 +740,11 @@ img {
 .address .link {
     
     color: rgba(255, 255, 255, 0.6);
+    line-height: 1.71;
     letter-spacing: 0.03em;
-    text-decoration-line: none;
 
     transition: color 250ms 
-    var(--trans-timing);
+    var(--bezier-timing);
 }
 
 .address .link:hover,
@@ -770,7 +763,6 @@ img {
     margin-bottom: 20px;
 
     font-weight: 700;
-    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
