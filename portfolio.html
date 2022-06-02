@@ -73,7 +73,7 @@
                 <!-- Filter list -->
                 <ul class="filters list">
                     <li class="item">
-                        <button class="button filter-primary" type="button">
+                        <button class="button primary" type="button">
                             <span class="filter">Все</span>
                         </button>
                     </li>
@@ -334,6 +334,21 @@
                 </li>
             </ul>
         </div>
+
+        <form name="signup" action="send" class="signup">
+            <h3 class="title">Подпишитесь на рассылку</h3>
+            <div class="signup-field">
+                <label>
+                    <input type="email" name="email" placeholder="E-mail" autocomplete="on" />
+                </label>
+                <button class="submit-btn" type="submit">Подписаться
+                    <svg class="icon" width="24" height="24">
+                        <use href="./images/sprite.svg#send-icon"></use>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
     </div>
 </footer>
 </body>
